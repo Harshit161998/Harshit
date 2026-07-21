@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>I'm Sorry </title>
+<title>I'm Sorry ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -127,7 +127,7 @@ opacity:0;
 
 <div class="container">
 
-<h1>I'm Sorry </h1>
+<h1>I'm Sorry ❤️</h1>
 
 <h2>Dear My Favorite Human</h2>
 
@@ -149,7 +149,7 @@ Hearts don't have a CTRL + Z.
 <div class="code">
 
 while(youAreAngry){<br>
-&nbsp;&nbsp;me.say("I'm Sorry ");<br>
+&nbsp;&nbsp;me.say("I'm Sorry ❤️");<br>
 &nbsp;&nbsp;me.missYou();<br>
 &nbsp;&nbsp;me.promise("I'll do better");<br>
 }
@@ -169,7 +169,7 @@ No excuses.
 
 Just a genuine apology.
 
-
+❤️
 
 </p>
 
@@ -192,7 +192,7 @@ document.getElementById("msg").style.display="block";
 for(let i=0;i<60;i++){
 
 let heart=document.createElement("div");
-
+heart.innerHTML="❤️";
 heart.className="heart";
 
 heart.style.left=Math.random()*100+"vw";
