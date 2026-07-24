@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Celebrity Look-Alike Scanner</title>
 
-<style> 
+<style>
 *{
     margin:0;
     padding:0;
@@ -101,9 +101,9 @@ to{opacity:1;transform:translateY(0);}
 
 .images{
     display:flex;
-    flex-wrap:wrap;
     justify-content:center;
-    gap:15px;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .images img{
@@ -157,18 +157,16 @@ Click the button below to discover which Bollywood actress you resemble.
 
 <div class="confidence">
 You look like <span style="color:#ff2d55;">Parineeti Chopra</span><br><br>
-
-AI Match Confidence:
-<b>98.7%</b>
+AI Match Confidence: <b>98.7%</b>
 </div>
 
 <div class="images">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Parineeti_Chopra_promoting_Hasee_Toh_Phasee.jpg">
+<img src="images/p1.jpg" alt="Parineeti 1">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Parineeti_Chopra_at_Golmaal_Again_promotions.jpg">
+<img src="images/p2.jpg" alt="Parineeti 2">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Parineeti_Chopra_at_the_launch_of_Fit_to_Fight.jpg">
+<img src="images/p3.jpg" alt="Parineeti 3">
 
 </div>
 
@@ -185,14 +183,14 @@ document.getElementById("loading").style.display="block";
 
 let progress=0;
 
-let messages=[
+const messages=[
 "Initializing AI Engine...",
 "Detecting Face...",
 "Analyzing Facial Structure...",
 "Comparing Eyes...",
 "Matching Smile...",
-"Finding Bollywood Database...",
-"Almost There..."
+"Searching Bollywood Database...",
+"Finalizing Match..."
 ];
 
 let index=0;
@@ -203,7 +201,7 @@ progress++;
 
 document.getElementById("progress").style.width=progress+"%";
 
-if(progress%15==0 && index<messages.length-1){
+if(progress%15===0 && index<messages.length-1){
 index++;
 document.getElementById("status").innerHTML=messages[index];
 }
@@ -221,7 +219,7 @@ document.getElementById("result").style.display="block";
 
 }
 
-},55);
+},50);
 
 }
 
