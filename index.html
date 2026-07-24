@@ -1,124 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm Sorry</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which Actress Do You Look Like?</title>
 
-    <style>
-        body{
-            margin:0;
-            padding:0;
-            background:#f4f4f4;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        .container{
-            width:700px;
-            max-width:90%;
-            margin:60px auto;
-            background:white;
-            padding:35px;
-            border-radius:8px;
-            box-shadow:0 2px 10px rgba(0,0,0,0.15);
-            text-align:center;
-        }
+body{
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-        h1{
-            color:#d32f2f;
-        }
+.container{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:90%;
+    max-width:700px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
 
-        p{
-            line-height:1.8;
-            font-size:17px;
-            color:#333;
-        }
+h1{
+    color:#333;
+    margin-bottom:15px;
+}
 
-        .code{
-            text-align:left;
-            background:#272822;
-            color:#8ef58e;
-            padding:15px;
-            border-radius:5px;
-            margin:25px 0;
-            font-family:Consolas, monospace;
-        }
+p{
+    color:#666;
+    margin-bottom:25px;
+    font-size:18px;
+}
 
-        button{
-            padding:12px 25px;
-            border:none;
-            background:#1976d2;
-            color:white;
-            font-size:16px;
-            border-radius:5px;
-            cursor:pointer;
-        }
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ff4d6d;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
 
-        button:hover{
-            background:#125aa0;
-        }
+button:hover{
+    transform:scale(1.05);
+    background:#e63956;
+}
 
-        #message{
-            display:none;
-            margin-top:25px;
-            color:green;
-            font-size:20px;
-            font-weight:bold;
-        }
+#result{
+    display:none;
+    margin-top:30px;
+}
 
-    </style>
+#result h2{
+    color:#ff2d55;
+    margin-bottom:20px;
+}
 
+.images{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.images img{
+    width:180px;
+    height:240px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.images img:hover{
+    transform:scale(1.05);
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
+    <h1>✨ Celebrity Look-Alike Test ✨</h1>
 
-<h1>I'm Sorry </h1>
+    <p>
+        Click the button below to know which actress you look like.
+    </p>
 
-<p>
-Hi,
+    <button onclick="showResult()">
+        Find My Look-Alike
+    </button>
 
-I know you're upset with me.
+    <div id="result">
+        <h2>😍 You look like Parineeti Chopra! 😍</h2>
 
-I'm not good at expressing my feelings, so I thought I'd use the one thing I'm comfortable with... writing a little webpage.
-</p>
-
-<div class="code">
-try {<br>
-&nbsp;&nbsp;makeYouSmile();<br>
-}<br>
-catch (AngryException e) {<br>
-&nbsp;&nbsp;System.out.println("I'm really sorry ❤️");<br>
-}
-</div>
-
-<p>
-I know I made a mistake.
-
-You mean a lot to me, and I genuinely don't want to lose our friendship.
-
-mene gaali baaki di sorry na mujhse se nikal jaati hain 
-
-😊
-</p>
-
-<button onclick="forgive()">Click Here</button>
-
-<div id="message">
-  or uske case me mere side se poori galti nhi thi i am sure on that 2 kadam vo aage badhaye 2 kadma me or me aya bhi uske pass <br><br>
-Even if you're still angry,<br>
-
-</div>
-
+        <div class="images">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Parineeti_Chopra_promoting_Hasee_Toh_Phasee.jpg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Parineeti_Chopra_at_Golmaal_Again_promotions.jpg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Parineeti_Chopra_at_the_launch_of_Fit_to_Fight.jpg">
+        </div>
+    </div>
 </div>
 
 <script>
-
-function forgive(){
-    document.getElementById("message").style.display="block";
+function showResult(){
+    document.getElementById("result").style.display="block";
 }
-
 </script>
 
 </body>
